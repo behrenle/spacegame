@@ -1,0 +1,56 @@
+{% extends "gameinterface/base.html" %}
+{% load static %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="{% static "/css/summary.css" %}">
+{% endblock stylesheets %}
+
+{% block content %}
+  <div id="summary-theme-box">
+    <div id="summary-theme-overlay">
+      <h1>Summary - {{ planet_name }}</h1>
+      <p><b>Radius: </b></p>
+      <p><b>Gravitational acceleration: </b></p>
+      <p><b>Climate: </b></p>
+      <p><b>Points: </b></p>
+    </div>
+
+    <img id="summary-theme-image" src="/static/imgs/summary-theme.jpg" alt="Summary theme image">
+  </div>
+  <table id="summary-jobs-box">
+    <tr>
+      <td>
+        <div id="summary-jobs-constructions" class="summary-jobs-sub">
+          <h2>Constructions</h2>
+          <ul>
+            {% for item in pipelines.constructions %}
+              <li>{{item.label}}: {{item.time_left}}s</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </td>
+      <td>
+        <div id="summary-jobs-research" class="summary-jobs-sub">
+          <h2>Research</h2>
+          <ul>
+            {% for item in pipelines.research %}
+              <li>{{item.label}}: {{item.time_left}}s</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </td>
+      <td>
+        <div id="summary-jobs-development" class="summary-jobs-sub">
+          <h2>Development</h2>
+          ...
+        </div>
+      </td>
+      <td>
+        <div id="summary-jobs-fabrication" class="summary-jobs-sub">
+          <h2>Fabrication</h2>
+          ...
+        </div>
+      </td>
+    </tr>
+  </table>
+{% endblock content %}

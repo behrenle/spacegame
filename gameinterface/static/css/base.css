@@ -1,0 +1,107 @@
+{% load static %}
+
+td, tr {
+  margin: none;
+  padding: none;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(32,32,32);
+  background-size: cover;
+}
+
+#side-menu {
+  position: fixed;
+  top: 120px;
+  left: 0px;
+  width: 370px;
+  bottom: 0px;
+  background-color: rgb(40,40,40);
+  border-right: 2px solid rgb(120,120,120);
+}
+
+#content-box {
+  position: absolute;
+  left: 400px;
+  right: 250px;
+  top: 150px;
+  background-color: rgb(40,40,40);
+  border: 2px solid rgb(120,120,120);
+  color: white;
+  padding: 10px;
+  z-index: -1;
+}
+
+.side-menu-item {
+  position: relative;
+  color: white;
+  left: 0px;
+  right: 0px;
+  font-size: 24pt;
+  padding-left: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: 1.25s;
+}
+
+.side-menu-item-selected {
+  position: relative;
+  color: white;
+  left: 0px;
+  right: 0px;
+  font-size: 24pt;
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(200, 100, 0);
+  font-weight: 900;
+}
+
+.side-menu-item:hover {
+  background-color: rgb(200, 100, 0);
+  padding-left: 50px;
+  transition: 0.75s;
+  font-weight: 900;
+}
+
+#resources-bar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 120px;
+  margin: none;
+  background-color: rgb(60,60,60);
+  border-bottom: 2px solid rgb(120,120,120);
+  color: white;
+}
+
+#resources-table {
+  margin: none;
+  padding: none;
+  width: 100%;
+  font-size: 18pt;
+}
+
+.resource_label {
+  color: white;
+}
+
+.resource_counter {
+  color: rgb(220,200,180);
+  margin: none;
+  padding: 10px;
+  text-align: center;
+  transition: 1.25s;
+}
+
+.resource_counter:hover {
+  background-color: rgb(200, 100, 0);
+  transition: 0.75s;
+}
+
+.resource_cell {
+  width: 16.66666%;
+}
