@@ -15,17 +15,25 @@ resources = [
     {"name": "Energy", "value": 0}
 ]
 
-menu = [
+menu_left = [
     {"label":"Summary", "link":"#"},
+    {"label":"Population", "link":"#"},
     {"label":"Production", "link":"#"},
     {"label":"Facilities", "link":"#"},
     {"label":"Research", "link":"#"},
     {"label":"Development", "link":"#"},
     {"label":"Factory", "link":"#"},
     {"label":"Defense", "link":"#"},
+    {"label":"Spaceport", "link":"#"},
+]
+
+menu_right = [
+    {"label":"Overview", "link":"#"},
     {"label":"Fleet Command", "link":"#"},
     {"label":"Astrometrics", "link":"#"},
     {"label":"Intergalactic market", "link":"#"},
+    {"label":"Education system", "link":"#"},
+    {"label":"Politics", "link":"#"},
 ]
 
 pipelines = {
@@ -47,7 +55,8 @@ def home(request):
     context = {
         "title": "Summary",
         "res": resources,
-        "menu": menu,
+        "menu_left": menu_left,
+        "menu_right": menu_right,
         "menu_select": "Summary",
         "planet_name": "[planetname]",
         "pipelines": pipelines,

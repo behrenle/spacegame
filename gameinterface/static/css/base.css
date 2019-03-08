@@ -8,11 +8,12 @@ td, tr {
 body {
   width: 100%;
   height: 100%;
-  background-color: rgb(32,32,32);
+  background-color: black;
+  background-image: url("/static/imgs/base-background.jpg");
   background-size: cover;
 }
 
-#side-menu {
+#side-menu-left {
   position: fixed;
   top: 120px;
   left: 0px;
@@ -22,19 +23,30 @@ body {
   border-right: 2px solid rgb(120,120,120);
 }
 
+#side-menu-right {
+  position: fixed;
+  right: 0px;
+  width: 370px;
+  top: 120px;
+  bottom: 0px;
+  background-color: rgb(40,40,40);
+  border-left: 2px solid rgb(120,120,120);
+}
+
 #content-box {
   position: absolute;
-  left: 400px;
-  right: 250px;
+  left: 380px;
+  right: 380px;
   top: 150px;
   background-color: rgb(40,40,40);
   border: 2px solid rgb(120,120,120);
   color: white;
   padding: 10px;
   z-index: -1;
+  margin: 10px;
 }
 
-.side-menu-item {
+.side-menu-left-item {
   position: relative;
   color: white;
   left: 0px;
@@ -43,10 +55,10 @@ body {
   padding-left: 25px;
   padding-top: 10px;
   padding-bottom: 10px;
-  transition: 1.25s;
+  transition: 0.5s;
 }
 
-.side-menu-item-selected {
+.side-menu-left-item-selected {
   position: relative;
   color: white;
   left: 0px;
@@ -59,10 +71,44 @@ body {
   font-weight: 900;
 }
 
-.side-menu-item:hover {
-  background-color: rgb(200, 100, 0);
+.side-menu-left-item:hover {
+  background-color: rgba(200, 100, 0, 0.75);
   padding-left: 50px;
-  transition: 0.75s;
+  transition: 0.25s;
+  font-weight: 900;
+}
+
+.side-menu-right-item {
+  position: relative;
+  color: white;
+  left: 0px;
+  right: 0px;
+  font-size: 24pt;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: right;
+  transition: 0.5s;
+}
+
+.side-menu-right-item-selected {
+  position: relative;
+  color: white;
+  left: 0px;
+  right: 0px;
+  font-size: 24pt;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(200, 100, 0);
+  font-weight: 900;
+  text-align: right;
+}
+
+.side-menu-right-item:hover {
+  background-color: rgba(200, 100, 0, 0.75);
+  padding-right: 50px;
+  transition: 0.25s;
   font-weight: 900;
 }
 
@@ -73,7 +119,8 @@ body {
   width: 100%;
   height: 120px;
   margin: none;
-  background-color: rgb(60,60,60);
+  background-image: linear-gradient(rgb(80,80,80), rgb(60,60,60));
+  //background-color: rgb(60,60,60);
   border-bottom: 2px solid rgb(120,120,120);
   color: white;
 }
