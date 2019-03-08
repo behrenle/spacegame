@@ -2,5 +2,5 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path("", views.home, name = "gameinterface-home"),
+    path("", views.content_pages, name = "gi-content-pages"),
 ]

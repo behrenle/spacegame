@@ -51,7 +51,7 @@ pipelines = {
 }
 
 # Create your views here.
-def home(request):
+def content_pages(request):
     context = {
         "title": "Summary",
         "res": resources,
@@ -61,4 +61,4 @@ def home(request):
         "planet_name": "[planetname]",
         "pipelines": pipelines,
     }
-    return render(request, "gameinterface/home.html", context)
+    return render(request, "gameinterface/content_pages.html", context)
